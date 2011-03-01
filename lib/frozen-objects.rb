@@ -4,3 +4,19 @@
 require "frozen-objects/string"
 require "frozen-objects/array"
 require "frozen-objects/hash"
+
+module Frozen
+    
+    ##
+    # Creates frozen object by operator.
+    #
+    # @param [Object] value some value for freeze
+    # @return [Object] frozen object
+    # @since 0.2.0
+    #
+    
+    def <<(value)
+        value.freeze
+    end
+    
+end
