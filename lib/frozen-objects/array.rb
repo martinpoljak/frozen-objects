@@ -7,7 +7,7 @@
 
 module Frozen
     ##
-    # Implicitly frozen array.
+    # Implicitly frozen +Array+.
     #
     # @note All calls are +Array+ compatible.
     # @see http://www.ruby-doc.org/core/classes/Array.html

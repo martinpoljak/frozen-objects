@@ -7,7 +7,7 @@
 
 module Frozen
     ##
-    # Implicitly frozen string.
+    # Implicitly frozen +String+.
     #
     # @note All calls are +String+ compatible.
     # @see http://www.ruby-doc.org/core/classes/String.html
