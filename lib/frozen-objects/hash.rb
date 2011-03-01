@@ -8,7 +8,9 @@
 module Frozen
     ##
     # Implicitly frozen hash.
+    #
     # @note All calls are +Hash+ compatible.
+    # @see http://www.ruby-doc.org/core/classes/Hash.html
     #
     
     class Hash < ::Hash

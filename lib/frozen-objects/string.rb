@@ -8,7 +8,9 @@
 module Frozen
     ##
     # Implicitly frozen string.
+    #
     # @note All calls are +String+ compatible.
+    # @see http://www.ruby-doc.org/core/classes/String.html
     #
     
     class String < ::String
