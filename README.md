@@ -1,5 +1,5 @@
 Frozen Objects
-=============
+==============
 
 **frozen-objects** provides syntax sugar of implicitly frozen objects 
 useful for example in class constants.
