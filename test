@@ -17,7 +17,18 @@ context "Array" do
     asserts("frozen state") do
         begin
             topic.replace([:c, :d])
-        rescue RuntimeError => e
+        rescue RuntimeError
+            true
+        end
+    end
+end
+
+context "Frozen" do
+    asserts("#<< (static)") do
+        frozen = Frozen << "alfa"
+        begin
+            frozen.replace("beta")
+        rescue RuntimeError
             true
         end
     end
@@ -34,7 +45,7 @@ context "Hash" do
     asserts("frozen state") do
         begin
             topic.replace({:c => :d})
-        rescue RuntimeError => e
+        rescue RuntimeError
             true
         end
     end
@@ -51,7 +62,7 @@ context "String" do
     asserts("frozen state") do
         begin
             topic.replace("new")
-        rescue RuntimeError => e
+        rescue RuntimeError
             true
         end
     end

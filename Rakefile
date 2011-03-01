@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "frozen-objects"
   gem.homepage = "http://github.com/martinkozak/frozen-objects"
   gem.license = "MIT"
-  gem.summary = 'Syntax sugar of implicitly frozen objects useful for example in class constants.'
+  gem.summary = 'Provides some syntactic sugar of implicitly frozen objects and an freezing operator useful for example in class constants.'
   gem.email = "martinkozak@martinkozak.net"
   gem.authors = ["Martin Kozák"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

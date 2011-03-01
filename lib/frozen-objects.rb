@@ -5,6 +5,10 @@ require "frozen-objects/string"
 require "frozen-objects/array"
 require "frozen-objects/hash"
 
+##
+# Implicitly frozen objects.
+#
+
 module Frozen
     
     ##
@@ -15,7 +19,7 @@ module Frozen
     # @since 0.2.0
     #
     
-    def <<(value)
+    def self.<<(value)
         value.freeze
     end
     
