@@ -1,0 +1,58 @@
+#!/usr/bin/ruby
+# encoding: utf-8
+# (c) 2011 Martin Kozák (martinkozak@martinkozak.net)
+
+$:.push("./lib")
+require "frozen-objects"
+require "riot"
+
+context "Array" do
+    setup do 
+        Frozen::Array[:a, :b]
+    end
+    
+    asserts("non-frozen class object equivalence") do
+        topic == [:a, :b]
+    end
+    asserts("frozen state") do
+        begin
+            topic.replace([:c, :d])
+        rescue RuntimeError => e
+            true
+        end
+    end
+end
+
+context "Hash" do
+    setup do 
+        Frozen::Hash[:a => :b]
+    end
+
+    asserts("non-frozen class object equivalence") do
+        topic == {:a => :b}
+    end    
+    asserts("frozen state") do
+        begin
+            topic.replace({:c => :d})
+        rescue RuntimeError => e
+            true
+        end
+    end
+end
+
+context "String" do
+    setup do 
+        Frozen::String::new("frozen")
+    end
+    
+    asserts("non-frozen class object equivalence") do
+        topic == "frozen"
+    end
+    asserts("frozen state") do
+        begin
+            topic.replace("new")
+        rescue RuntimeError => e
+            true
+        end
+    end
+end
