@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{frozen-objects}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Martin Kozák"]
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
+    "frozen-objects.gemspec",
     "lib/frozen-objects.rb",
     "lib/frozen-objects/array.rb",
     "lib/frozen-objects/hash.rb",
@@ -33,7 +34,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.5.3}
-  s.summary = %q{Syntax sugar of implicitly frozen objects useful for example in class constants.}
+  s.summary = %q{Provides some syntactic sugar of implicitly frozen objects and an freezing operator useful for example in class constants.}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
