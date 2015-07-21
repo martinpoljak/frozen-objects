@@ -17,21 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/martinkozak/frozen-objects"
   gem.license = "MIT"
   gem.summary = 'Provides some syntactic sugar of implicitly frozen objects and an freezing operator useful for example in class constants.'
-  gem.email = "martinkozak@martinkozak.net"
-  gem.authors = ["Martin Kozák"]
+  gem.email = "martin@poljak.cz"
+  gem.authors = ["Martin Poljak"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
-
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "hash-utils #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
